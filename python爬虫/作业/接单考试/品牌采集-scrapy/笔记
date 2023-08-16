@@ -1,0 +1,31 @@
+思路：
+题目中说的不少于5个分类，不少于5000个品牌
+1 首先找到5个分类的请求地址和每个分类中的每个品牌的地址
+  分类地址：
+    http://www.winshangdata.com/wsapi/brand/list3_4
+    地址载荷 {
+    "isHaveLink": "",
+    "isTuozhan": "",
+    "isXxPp": "",
+    "kdfs": "",
+    "key": "",
+    "orderBy": "1",
+    "pageNum": 1,
+    "pageSize": 60,
+    "pid": "",
+    "qy_p": "",
+    "qy_r": "",
+    "xqMj": "",
+    "ytlb1": "儿童亲子",
+    "ytlb2": ""
+    }其中ytlb1就是每个分类的标识
+
+
+2 看下每个请求是否有加密参数等信息，分析来看基本信息通过xpath提取即可
+
+3 使用scrapy实现具体的爬虫任务
+
+
+1 request params指的是参数部分，不是负载，负载用json=data
+2 head里面携带全部信息会导致出问题
+3 formdata里面int要转为str

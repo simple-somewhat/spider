@@ -1,0 +1,1 @@
+为什么用python post请求就获取不到数据呢 ---在post的时候使用json=content和data=content有区别.检查下为什么
