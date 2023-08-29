@@ -1,0 +1,6 @@
+头条对signature已经不做校验了。
+知乎有cookie就可以了。
+weibo请求记得返回response.json 如果是text会有乱码
+ "X-Xsrf-Token": "5d9747" 请求这个值不需要
+ "Cookie": "_T_WM=37256541035; XSRF-TOKEN=5d9747; WEIBOCN_FROM=1110006030; MLOGIN=0; M_WEIBOCN_PARAMS=oid%3D4937598894870357%26luicode%3D10000011%26lfid%3D102803", 也不需要
+ containerid 也是一个固定的值
